@@ -1,0 +1,13 @@
+@mixin cajas {
+	margin-left: 20px;
+	border-radius: 5px;
+	width: 300px;
+	background-color: $color-cajas;
+	position: absolute;
+}
+
+@mixin boton {
+	width: 300px;
+	margin-left:20px;
+	position: absolute;
+}

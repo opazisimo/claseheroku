@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Examen Herramientas Productividad</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
+</head>
+<body>
+	<section>
+		<div class="navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<img src="dist/images/logo-gris.jpg" class="logo">
+					</div>
+					<div class="hidden-xs col-sm-6 col-md-6">	
+						 <i class="fa fa-info-circle fa-3x" data-toggle="tooltip" data-placement="bottom" title="La nueva forma de moverte en la ciudad. Con carrocomp! puedes compartir tu viaje con amigos y cobrar el costo equitativamente."></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="map"></div>
+				<div class="caja-select">
+					<div class="select">
+                		<p>ORIGEN</p>
+                		 <select name="origen" id="origen" class="seleccion">
+                    		<option value="0">Seleccione</option>
+                    		<option value="Arica">Arica</option>
+                    		<option value="Iquique">Iquique</option>
+                    		<option value="Antofagasta">Antofagasta</option>
+                    		<option value="Calama">Calama</option>
+                    		<option value="La Serena">La Serena</option>
+                    		<option value="Valparaiso">Valparaiso</option>
+                    		<option value="Santiago">Santiago</option>
+                    		<option value="Rancagua">Rancagua</option>
+                    		<option value="Talca">Talca</option>
+                    		<option value="Concepcion">Concepcion</option>
+                    		<option value="Temuco">Temuco</option>
+                    		<option value="Valdivia">Valdivia</option>
+                    		<option value="Puerto Montt">Puerto Montt</option>
+                    		<option value="Coyhaique">Coyhaique</option>
+                    		<option value="Punta Arenas">Punta Arenas</option>
+                		</select> 
+            		</div>
+            		<div class="select-dest">
+               		 	<p>DESTINO</p>
+                 		<select name="destino" id="destino" class="seleccion">
+                    		<option value="0">Seleccione</option>
+                    		<option value="Arica">Arica</option>
+                    		<option value="Iquique">Iquique</option>
+                    		<option value="Antofagasta">Antofagasta</option>
+                    		<option value="Calama">Calama</option>
+                    		<option value="La Serena">La Serena</option>
+                    		<option value="Valparaiso">Valparaiso</option>
+                    		<option value="Santiago">Santiago</option>
+                    		<option value="Rancagua">Rancagua</option>
+                    		<option value="Talca">Talca</option>
+                    		<option value="Concepcion">Concepcion</option>
+                    		<option value="Temuco">Temuco</option>
+                    		<option value="Valdivia">Valdivia</option>
+                    		<option value="Puerto Montt">Puerto Montt</option>
+                    		<option value="Coyhaique">Coyhaique</option>
+                    		<option value="Punta Arenas">Punta Arenas</option>
+                		</select> 
+           		 	</div>
+            	</div>
+            	<button id="btn" type="button" name="boton" class="btn btn-warning btn-md buscar" disabled="disabled" onclick="mostrar()">Buscar</button>
+            	<div id="caja2" style="display:none">
+            		<div class="caja-radio">
+            			<h4 class="nombre">Vehiculo</h4>
+            			<h5>Seleccione</h5>
+            			 <div class="radio">
+  							<label><input type="radio" name="optradio"><img src="src/img/moto.jpg" width="40px" height="40px"><p class="nombre">Motocicleta</p></label><p class="nombre2">Máximo 2 personas</p>
+						</div>
+						<div class="radio">
+  							<label><input type="radio" name="optradio"><img src="src/img/auto.jpg" width="40px" height="40px"><p class="nombre">Automovil</p></label><p class="nombre2">Máximo 5 personas</p>
+						</div>
+						<div class="radio">
+  							<label><input type="radio" name="optradio" disabled><img src="src/img/van.jpg" width="40px" height="40px"><p class="nombre">Minivan</p></label><p class="nombre2">Máximo 10 personas</p>
+						</div>
+						<div class="radio">
+  							<label><input type="radio" name="optradio" disabled><img src="src/img/camion.jpg" width="40px" height="40px"><p class="nombre">Camion</p></label><p class="nombre2">Máximo 3 personas</p>
+						</div>
+						<div><p class="nombre">Cantidad de pasajeros</p><input></input></div>
+            		</div>
+            		<button type="button" class="btn btn-warning btn-md compartir">Compartir Carro</button>	
+            	</div>
+			</div>	
+		</div>
+	</section>  
+	<section id="info"  >
+		<div class="container">
+		</div>
+	</section><!--END ABOUT SECTION-->
+	<section id="calculator" >
+		<div class="container">
+		</div>
+	</section><!--END PROJECT SECTION-->
+	<div id="footer">
+		 
+	</div><!-- END FOOTER SECTION -->
+
+</body>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+ 	 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  	crossorigin="anonymous"></script>
+  	<script type="text/javascript" src="node_modules/bootstrap/js/tooltip.js"></script>
+	<script type="text/javascript" src="dist/js/script.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyKyKw_EOsADrCgiW7-anSpFMyoBR4-J8&callback=initMap">
+  	</script>
+
+</html>
